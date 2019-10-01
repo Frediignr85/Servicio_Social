@@ -12,7 +12,17 @@ function IniciarSesion(){
           url:   '../PHP/login.php', //archivo que recibe la peticion
           type:  'post',
           success:  function (response) { //una vez que el archivo recibe el request lo procesa y lo devuelve
-                  alert(response);
+                  if(response == "1"){
+                    alert("Bienvenido Administrador");
+                  }
+                  else {
+                    if(response == "2"){
+                      alert("Bienvenido Estudiante");
+                    }
+                    else {
+                      alert(response);
+                    }
+                  }
           }
   });
 }
